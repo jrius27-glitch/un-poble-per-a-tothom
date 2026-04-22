@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Propostes de millora · Poble per a tothom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estils.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="navbar">
+      <div class="nav-brand">
+         <div class="nav-left">
+            <a href="index.html" class="nav-logo">
+            <img src="img/urv-centrat-color.png" alt="Universitat Rovira i Virgili" class="logo-img">
+            <span class="nav-brand-text">Poble per a tothom</span>
+            </a>
+    </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Obrir menú">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="resultats.html">Resultats</a></li>
+        <li><a href="propostes.html" class="active">Propostes</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
+        <li><a href="membres.html">Membres</a></li>
+        <li><a href="contacte.html">Contacte</a></li>
+      </ul>
+      <button id="themeToggle" class="nav-btn" aria-label="Canvia el tema de color">
+        🌙
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" class="mobile-link">Inici</a>
+      <a href="resultats.html" class="mobile-link">Resultats</a>
+      <a href="propostes.html" class="mobile-link">Propostes</a>
+      <a href="mapa.html" class="mobile-link">Mapa</a>
+      <a href="membres.html" class="mobile-link">Membres</a>
+      <a href="contacte.html" class="mobile-link">Contacte</a>
+  </div>
+  </header>
+
+  <main>
+    <section id="propostes" class="section proposals-tabs">
+      <header class="section-header">
+        <h2>Propostes de millora</h2>
+        <p>Clica sobre cada pestanya per veure la descripció o exemple visual</p>
+      </header>
+
+      <div class="tabs-container">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="senyalitzacio">Senyalització</button>
+          <button class="tab-btn" data-tab="semafor">Semàfors</button>
+          <button class="tab-btn" data-tab="voreres">Voreres</button>
+          <button class="tab-btn" data-tab="aparcament">Aparcament</button>
+        </div>
+
+        <div class="tabs-content">
+          <div class="tab-panel active" id="senyalitzacio">
+            <div class="tab-view active" data-view="text">
+              <div class="proposal-icon"><span>🚏</span></div>
+              <h3>SENYALITZACIÓ I PASSOS ACCESSIBLES</h3>
+              <p>Instal·lació de mobiliari accessible per a persones amb discapacitat, així com passos de vianants amb paviment especial i relleu per facilitar l’orientació de persones amb discapacitat visual.</p>
+            </div>
+            <div class="tab-view" data-view="image">
+              <img src="img/mv.png" alt="Exemple de pas de vianants accessible">
+              <p class="image-caption">Exemple de paviment podotàctil accessible</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="semafor">
+            <div class="tab-view active" data-view="text">
+              <div class="proposal-icon"><span>🚦</span></div>
+              <h3>SEMÀFORS INTEL·LIGENTS</h3>
+              <p>Instal·lació de semàfors with sensors de moviment que ampliïn automàticament el temps de pas per a persones grans o amb mobilitat reduïda. Incorporació de senyals audibles amb volum regulable i vibració per facilitar el creuament a persones amb discapacitat auditiva.</p>
+            </div>
+            <div class="tab-view" data-view="image">
+              <img src="img/semafors.png" alt="Semàfor inclusiu amb sensors">
+              <p class="image-caption">Semàfor amb sensors de moviment</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="voreres">
+            <div class="tab-view active" data-view="text">
+              <div class="proposal-icon"><span>🚶</span></div>
+              <h3>AMPLIACIÓ DE VORERES</h3>
+              <p>En alguns trams, les voreres són massa estretes o tenen obstacles. Proposem ampliar-les i eliminar-ne els elements innecessaris per garantir un pas segur i còmode per a tothom, especialment persones amb mobilitat reduïda i infants.</p>
+            </div>
+            <div class="tab-view" data-view="image">
+              <img src="img/vorerapng.png" alt="Vorera ampliada sense obstacles">
+              <p class="image-caption">Vorera ampliada i lliure d'obstacles</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="aparcament">
+            <div class="tab-view active" data-view="text">
+              <div class="proposal-icon"><span>P</span></div>
+              <h3>APARCAMENTS ADAPTATS</h3>
+              <p>Places ampliades per a persones amb discapacitat prop dels equipaments principals.</p>
+            </div>
+            <div class="tab-view" data-view="image">
+              <img src="img/mv aparcament.png" alt="Aparcament adaptat">
+              <p class="image-caption">Places d’aparcament ampliades per a vehicles, bicicletes adaptades i patinets elèctrics, amb punts de càrrega i suports estabilitzadors. També es preveu la instal·lació d'il·luminació intel·ligent amb sensors de moviment per millorar la seguretat nocturna, aixi com una opció de reserva via app per garantir accessibilitat prioritària.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-toggle">
+          <button class="toggle-btn active" data-view="text">📝 Descripció</button>
+          <button class="toggle-btn" data-view="image">🖼️ Exemple</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Treball de geografia · Accessibilitat als Pallaresos · Curs 2025-26</p>
+    <p>&copy; Jaume Rius de la Yglesia 2026.</p>
+    <p><a href="#top" class="btn-top">Tornar a dalt</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
