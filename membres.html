@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html lang="ca">
-
 <head>
   <meta charset="UTF-8">
   <title>Membres · Poble per a tothom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estils.css">
 </head>
-
 <body>
   <header class="topbar">
     <nav class="navbar">
       <div class="nav-brand">
-        <div class="nav-left">
-          <a href="index.html" class="nav-logo">
+         <div class="nav-left">
+            <a href="index.html" class="nav-logo">
             <img src="img/urv-centrat-color.png" alt="Universitat Rovira i Virgili" class="logo-img">
             <span class="nav-brand-text">Poble per a tothom</span>
-          </a>
-        </div>
+            </a>
+    </div>
         <button class="menu-toggle" id="menuToggle" aria-label="Obrir menú">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
       </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Inici</a></li>
+        <li><a href="resultats.html">Resultats</a></li>
+        <li><a href="propostes.html">Propostes</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
         <li><a href="membres.html" class="active">Membres</a></li>
-        <li><a href="index.html#propostes">Propostes</a></li>
-        <li><a href="mapa.html">Mapa Interactiu</a></li>
-        <li><a href="index.html#contacte">Contacte</a></li>
+        <li><a href="contacte.html">Contacte</a></li>
       </ul>
       <button id="themeToggle" class="nav-btn" aria-label="Canvia el tema de color">
         🌙
       </button>
     </nav>
-    <!-- menú mob x si un cas,-->
     <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html#context" class="mobile-link">Context</a>
-      <a href="index.html#metode" class="mobile-link">Mètode</a>
+      <a href="index.html" class="mobile-link">Inici</a>
+      <a href="resultats.html" class="mobile-link">Resultats</a>
+      <a href="propostes.html" class="mobile-link">Propostes</a>
       <a href="mapa.html" class="mobile-link">Mapa</a>
       <a href="membres.html" class="mobile-link">Membres</a>
-      <a href="mapa.html" class="mobile-link">Mapa Interactiu</a>
-      <a href="index.html#propostes" class="mobile-link">Propostes</a>
-      <a href="index.html#contacte" class="mobile-link">Contacte</a>
-    </div>
+      <a href="contacte.html" class="mobile-link">Contacte</a>
+  </div>
   </header>
-
 
   <main>
     <section class="section team expand-hover" id="membres">
@@ -62,7 +57,7 @@
       <div class="team-grid">
         <article class="team-card">
           <div class="team-photo">
-            <img src="img/Jaume.jpg" alt="Jaume">
+            <img src="img/Jaume.jpg" alt="Jaume Rius">
           </div>
           <h3>Jaume Rius</h3>
           <p class="team-role">Coordinador del projecte</p>
@@ -70,7 +65,7 @@
 
         <article class="team-card">
           <div class="team-photo">
-            <img src="img/Alex.png" alt="Alex">
+            <img src="img/Alex.png" alt="Alex Sales">
           </div>
           <h3>Alex Sales</h3>
           <p class="team-role">Responsable de treball de camp</p>
@@ -78,7 +73,7 @@
 
         <article class="team-card">
           <div class="team-photo">
-            <img src="img/Paola.png" alt="Paola">
+            <img src="img/Paola.png" alt="Paola Vilagran">
           </div>
           <h3>Paola Vilagran</h3>
           <p class="team-role">Dissenyadora gràfica i web</p>
@@ -86,7 +81,7 @@
 
         <article class="team-card">
           <div class="team-photo">
-            <img src="img/ger.png" alt="Gerard">
+            <img src="img/ger.png" alt="Gerard Salgado">
           </div>
           <h3>Gerard Salgado</h3>
           <p class="team-role">Tècnic SIG</p>
@@ -103,5 +98,4 @@
 
   <script src="script.js"></script>
 </body>
-
 </html>
