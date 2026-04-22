@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacte · Poble per a tothom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estils.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="navbar">
+      <div class="nav-brand">
+         <div class="nav-left">
+            <a href="index.html" class="nav-logo">
+            <img src="img/urv-centrat-color.png" alt="Universitat Rovira i Virgili" class="logo-img">
+            <span class="nav-brand-text">Poble per a tothom</span>
+            </a>
+    </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Obrir menú">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="resultats.html">Resultats</a></li>
+        <li><a href="propostes.html">Propostes</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
+        <li><a href="membres.html">Membres</a></li>
+        <li><a href="contacte.html" class="active">Contacte</a></li>
+      </ul>
+      <button id="themeToggle" class="nav-btn" aria-label="Canvia el tema de color">
+        🌙
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" class="mobile-link">Inici</a>
+      <a href="resultats.html" class="mobile-link">Resultats</a>
+      <a href="propostes.html" class="mobile-link">Propostes</a>
+      <a href="mapa.html" class="mobile-link">Mapa</a>
+      <a href="membres.html" class="mobile-link">Membres</a>
+      <a href="contacte.html" class="mobile-link">Contacte</a>
+  </div>
+  </header>
+
+  <main>
+    <section id="contacte" class="section">
+      <header class="section-header">
+        <h2>Contacta'ns</h2>
+        <p>"El teu punt de vista és clau per fer del poble un lloc més accessible. Escriu-nos les teves idees, dubtes o propostes de millora. Junts podem transformar els espais públics"!</p>
+      </header>      
+     <div class="contact-container">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Correu electrònic</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="missatge">Missatge</label>
+            <textarea id="missatge" name="missatge" rows="5" required 
+              placeholder="Explica'ns la teva consulta o suggeriment..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary full-width">
+            Enviar missatge
+          </button>
+        </form>
+    
+        <div class="contact-info">
+          <h3>Dades de contacte</h3>
+            <ul class="contact-list">
+            <li class="contact-item icon solid fa-home">
+              Vila-seca<br />
+              Carrer de Joanot Martorell, 15<br />
+              43840 Vila-seca, Tarragona
+            </li>
+            <li class="contact-item icon solid fa-phone">977 29 79 00</li>
+            <li class="contact-item icon solid fa-envelope">
+              <a href="mailto:unpobleperatothom@gmail.com">unpobleperatothom@gmail.com</a>
+            </li>
+            <li class="contact-item icon brands fa-twitter">
+              <a href="https://twitter.com/unpobleperatothom" target="_blank">twitter.com/unpobleperatothom</a>
+            </li>
+            <li class="contact-item icon brands fa-facebook-f">
+              <a href="https://facebook.com/unpobleperatothom" target="_blank">facebook.com/unpobleperatothom</a>
+            </li>
+            <li class="contact-item icon brands fa-instagram" data-hover-img="img/insta.jpg">
+              <a href="https://instagram.com/unpobleperatothom" target="_blank">instagram.com/unpobleperatothom</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Treball de geografia · Accessibilitat als Pallaresos · Curs 2025-26</p>
+    <p>&copy; Jaume Rius de la Yglesia 2026.</p>
+    <p><a href="#top" class="btn-top">Tornar a dalt</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
