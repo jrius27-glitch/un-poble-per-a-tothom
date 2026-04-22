@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultats de l'estudi · Poble per a tothom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estils.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="navbar">
+      <div class="nav-brand">
+         <div class="nav-left">
+            <a href="index.html" class="nav-logo">
+            <img src="img/urv-centrat-color.png" alt="Universitat Rovira i Virgili" class="logo-img">
+            <span class="nav-brand-text">Poble per a tothom</span>
+            </a>
+    </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Obrir menú">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="resultats.html" class="active">Resultats</a></li>
+        <li><a href="propostes.html">Propostes</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
+        <li><a href="membres.html">Membres</a></li>
+        <li><a href="contacte.html">Contacte</a></li>
+      </ul>
+      <button id="themeToggle" class="nav-btn" aria-label="Canvia el tema de color">
+        🌙
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" class="mobile-link">Inici</a>
+      <a href="resultats.html" class="mobile-link">Resultats</a>
+      <a href="propostes.html" class="mobile-link">Propostes</a>
+      <a href="mapa.html" class="mobile-link">Mapa</a>
+      <a href="membres.html" class="mobile-link">Membres</a>
+      <a href="contacte.html" class="mobile-link">Contacte</a>
+  </div>
+  </header>
+
+  <main>
+    <section id="analisi" class="section">
+      <header class="section-header">
+        <h2>Resultats de l'estudi</h2>
+        <p>Anàlisi exhaustiva del nucli urbà dels Pallaresos</p>
+      </header>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">35%</div>
+          <p>Passos de vianants accessibles</p>
+        </div>
+        <div class="stat-card warn">
+          <div class="stat-number">65%</div>
+          <p>Amb obstacles significatius</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">20%</div>
+          <p>Semàfors inclusius</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">13</div>
+          <p>Passos a adaptar</p>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <article class="card highlight">
+          <h3>✅ Punts forts</h3>
+          <ul class="check-list">
+            <li><strong>35%</strong> dels passos compleixen estàndards d'accessibilitat</li>
+            <li>Presència de voreres en la majoria de carrers principals</li>
+            <li>Concentració d'equipaments al centre (escola, comerços, serveis)</li>
+          </ul>
+        </article>
+
+        <article class="card warn highlight">
+          <h3>⚠️ Punts febles</h3>
+          <ul class="warn-list">
+            <li><strong>65%</strong> dels passos tenen obstacles (rampes, desnivells >3cm)</li>
+            <li>Només <strong>20%</strong> dels semàfors són inclusius</li>
+            <li>Voreres estretes en zones de gran trànsit de vianants</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="proposal-phases">
+        <h3>Plà d'actuació propost</h3>
+        <div class="phase-grid">
+          <div class="phase-card">
+            <div class="phase-badge">Fase 1</div>
+            <h4>Mitjà termini (1 any)</h4>
+            <ul>
+              <li>Ampliar voreres més estretes</li>
+              <li>Instal·lar 5 semàfors inclusius</li>
+            </ul>
+          </div>
+          <div class="phase-card">
+            <div class="phase-badge">Fase 2</div>
+            <h4>Llarg termini (2 anys)</h4>
+            <ul>
+              <li>Adaptar els 13 passos no accessibles</li>
+              <li>Millorar pàrquing adaptat</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Treball de geografia · Accessibilitat als Pallaresos · Curs 2025-26</p>
+    <p>&copy; Jaume Rius de la Yglesia 2026.</p>
+    <p><a href="#top" class="btn-top">Tornar a dalt</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

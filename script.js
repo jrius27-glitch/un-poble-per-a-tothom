@@ -26,44 +26,50 @@ if (form) {
     form.reset();
   });
 }
+
 // propostes
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');
 const toggleBtns = document.querySelectorAll('.toggle-btn');
 const tabViews = document.querySelectorAll('.tab-view');
 
-tabBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const targetTab = btn.dataset.tab;
-    
-    tabBtns.forEach(b => b.classList.remove('active'));
-    tabPanels.forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(targetTab).classList.add('active');
-  });
-});
-
-toggleBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const targetView = btn.dataset.view;
-    
-    // Canviar vista (text/image)
-    toggleBtns.forEach(b => b.classList.remove('active'));
-    tabViews.forEach(view => view.classList.remove('active'));
-    btn.classList.add('active');
-    
-    document.querySelectorAll('.tab-panel.active .tab-view').forEach(view => {
-      if (view.dataset.view === targetView) {
-        view.classList.add('active');
-      }
+if (tabBtns.length > 0) {
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetTab = btn.dataset.tab;
+      
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabPanels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const targetEl = document.getElementById(targetTab);
+      if (targetEl) targetEl.classList.add('active');
     });
   });
-});
+}
+
+if (toggleBtns.length > 0) {
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetView = btn.dataset.view;
+      
+      // Canviar vista (text/image)
+      toggleBtns.forEach(b => b.classList.remove('active'));
+      tabViews.forEach(view => view.classList.remove('active'));
+      btn.classList.add('active');
+      
+      document.querySelectorAll('.tab-panel.active .tab-view').forEach(view => {
+        if (view.dataset.view === targetView) {
+          view.classList.add('active');
+        }
+      });
+    });
+  });
+}
+
 //navegador
 const navbar = document.querySelector('.navbar');
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
-const navLinks = document.getElementById('navLinks');
 
 if (menuToggle && mobileMenu) {
   menuToggle.addEventListener('click', () => {
@@ -73,7 +79,7 @@ if (menuToggle && mobileMenu) {
   });
 
   document.addEventListener('click', (e) => {
-    if (!navbar.contains(e.target)) {
+    if (navbar && !navbar.contains(e.target)) {
       mobileMenu.classList.remove('active');
       menuToggle.classList.remove('active');
       document.body.classList.remove('menu-open');
@@ -83,8 +89,8 @@ if (menuToggle && mobileMenu) {
 
 document.querySelectorAll('.mobile-link').forEach(link => {
   link.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    menuToggle.classList.remove('active');
+    if (mobileMenu) mobileMenu.classList.remove('active');
+    if (menuToggle) menuToggle.classList.remove('active');
     document.body.classList.remove('menu-open');
   });
 });

@@ -1498,6 +1498,18 @@ body.dark .contact-item:hover {
   transition-delay: 0.2s;
 }
 
+/* Animations */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 720px) {
   .proposal-grid {
     grid-template-columns: 1fr;
