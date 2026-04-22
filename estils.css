@@ -62,7 +62,6 @@ body.dark {
 
   --border-soft: rgba(255, 255, 255, 0.1);
   --shadow-soft: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
-
   --muted: rgba(255, 255, 255, 0.05);
   --muted-strong: rgba(255, 255, 255, 0.1);
   --muted-soft: rgba(255, 255, 255, 0.02);
@@ -1496,18 +1495,6 @@ body.dark .contact-item:hover {
 
 .section:nth-child(3) {
   transition-delay: 0.2s;
-}
-
-/* Animations */
-.reveal-hidden {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 @media (max-width: 720px) {
