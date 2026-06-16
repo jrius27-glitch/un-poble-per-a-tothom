@@ -48,19 +48,6 @@ El repositori està organitzat de la següent manera:
   - `resources/`: Biblioteques d'OpenLayers, fulls d'estil (`ol.css`, `qgis2web.css`) i scripts de control de capes.
 - `img/`: Carpeta de mitjans gràfics del lloc (logotip de la universitat, fotos dels investigadors i imatges dels passos i semàfors).
 
-## 🛠️ Com Executar el Projecte en Local
-
-Per visualitzar i provar el projecte a la teva màquina local:
-1. Descarrega o clona aquest repositori de GitHub.
-2. Obre directament el fitxer `index.html` en qualsevol navegador web modern, o executa un servidor de desenvolupament local simple si vols provar-ho com a entorn de servidor:
-   ```bash
-   # Si utilitzes Python
-   python -m http.server 8000
-   
-   # O si utilitzes Node/npm
-   npx serve .
-   ```
-3. Navega a `http://localhost:8000` (o al port indicat) per comprovar totes les funcionalitats, la càrrega del mapa i el funcionament del mode fosc.
 
 ## 👥 Crèdits i Equip de Recerca
 
@@ -73,4 +60,3 @@ Aquest estudi ha estat possible gràcies al treball coordinat de l'equip:
 
 ---
 *Treball de Geografia · Accessibilitat als Pallaresos · Curs 2025-26*
-*© Jaume Rius de la Yglesia, 2026.*

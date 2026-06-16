@@ -8,39 +8,9 @@ var map = new ol.Map({
     })
 });
 
-//initial view - dynamically compute extent of all vector layers
-var layersExtent = ol.extent.createEmpty();
-var layersToFit = [
-    typeof lyr_Passosavianantsaccessibles_1 !== 'undefined' ? lyr_Passosavianantsaccessibles_1 : null,
-    typeof lyr_Passosnoacessibles_2 !== 'undefined' ? lyr_Passosnoacessibles_2 : null,
-    typeof lyr_Ampliaccidevoreres_3 !== 'undefined' ? lyr_Ampliaccidevoreres_3 : null,
-    typeof lyr_Parkingsadaptats_4 !== 'undefined' ? lyr_Parkingsadaptats_4 : null,
-    typeof lyr_Semaforsinclusius_5 !== 'undefined' ? lyr_Semaforsinclusius_5 : null
-];
-
-layersToFit.forEach(function(layer) {
-    if (layer && typeof layer.getSource === 'function') {
-        var source = layer.getSource();
-        if (source && typeof source.getExtent === 'function') {
-            var extent = source.getExtent();
-            if (extent && extent.length === 4 && extent[0] !== Infinity && extent[0] !== -Infinity) {
-                ol.extent.extend(layersExtent, extent);
-            }
-        }
-    }
-});
-
-if (!ol.extent.isEmpty(layersExtent)) {
-    map.getView().fit(layersExtent, {
-        size: map.getSize(),
-        padding: [50, 50, 50, 50],
-        maxZoom: 18
-    });
-} else {
-    // Fallback to Els Pallaresos center in EPSG:3857 if extent is empty
-    map.getView().setCenter([141500, 5038000]);
-    map.getView().setZoom(16);
-}
+//initial view - epsg:3857 coordinates if not "Match project CRS"
+map.getView().setCenter(ol.proj.fromLonLat([1.2735, 41.175]));
+map.getView().setZoom(16);
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
@@ -549,6 +519,12 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 
 //layerswitcher
 
+var layerSwitcher = new ol.control.LayerSwitcher({
+    tipLabel: "Layers",
+    target: 'top-right-container'
+});
+map.addControl(layerSwitcher);
+    
 
 
 
