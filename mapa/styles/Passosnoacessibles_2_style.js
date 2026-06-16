@@ -1,13 +1,12 @@
 var size = 0;
 var placement = 'point';
 
-var style_Passosnoacessibles_1 = function(feature, resolution){
+var style_Passosnoacessibles_2 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
     };
-    
-    var labelText = ""; 
+    var labelText = "";
     var value = feature.get("");
     var labelFont = "10px, sans-serif";
     var labelFill = "#000000";
@@ -20,9 +19,13 @@ var style_Passosnoacessibles_1 = function(feature, resolution){
     if ("" !== null) {
         labelText = String("");
     }
+    
     var style = [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 4.0 + size,
-            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(255,158,23,1.0)'})}),
+        image: new ol.style.Icon({
+            src: 'images/inaccessible_crossing.svg',
+            scale: 0.8,
+            anchor: [0.5, 0.5]
+        }),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
