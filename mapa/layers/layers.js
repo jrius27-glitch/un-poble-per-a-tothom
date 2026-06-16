@@ -2,7 +2,7 @@ var wms_layers = [];
 
 var lyr_STOrtofotocolor2023_0 = new ol.layer.Tile({
                             source: new ol.source.TileWMS(({
-                              url: "http://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms",
+                              url: "https://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms",
                               attributions: ' ',
                               params: {
                                 "LAYERS": "ortofoto_color_2023",
